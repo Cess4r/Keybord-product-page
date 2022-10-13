@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 566px){
+    #video{
+        width: 95%;
+    }
+}
+
 body{
     background: #C2C5AA;
 
@@ -64,9 +70,14 @@ body{
                 background: none;
                 border-color: rgb(46, 43, 43);
             }
-            .btn:hover{
-                background: rgb(46, 43, 43);
+            .btn{
+                background:rgb(46, 43, 43);
                 color: #C2C5AA;
+            }
+            .btn:hover{
+                background: rgb(78, 69, 69);
+                color:rgb(250, 234, 234);;
+                
             }
         }
     }
@@ -78,10 +89,86 @@ body{
         align-items: center;
         
         #features{
-            max-width: 60%;
+            margin: 0 1em;
+            max-width: 650px;
             .grid{
+                display: flex;
+    
+                align-items: center;
                 margin-bottom: 4em;
+
+                .icon{
+                    margin-right: 10px;
+                }
             }
+        }
+
+        #how-it-works{
+            text-align: center;
+            width: 100%;
+            margin: 1em;
+        }
+
+        #pricing{
+            text-align: center;
+            width: 100%;
+            margin: 5em auto;
+            padding: 0 2em;
+          
+            .contcarts{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1.2em;
+               
+                .card{
+                    border: 2px solid rgb(46, 43, 43);
+                    border-radius: 3px;
+
+                    .lavel{
+                        background: #A4AC86;
+                        padding: 10px 0;
+                        margin-bottom: 1em;
+                    }
+
+                    ul{
+                        margin: 1.6em 0;
+                        li{
+                            list-style: none;
+                        }
+                    }
+
+                    button{
+                        margin: 9px 0;
+                        transition: 0.5s;
+                        border-radius: 4px;               
+                        padding: 0.5em 1em;
+                        background: none;
+                        border-color: rgb(46, 43, 43);
+                        background:rgb(46, 43, 43);
+                        color: #C2C5AA;
+    
+                        &:hover{
+                            background: rgb(78, 69, 69);
+                            color:rgb(250, 234, 234);;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+
+    footer{
+        max-width: 100%;  
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+        .contener{
+            border-radius: 3px;
+            width: 80%;
+            background: #A4AC86;
+            padding: 1em;
         }
     }
 
